@@ -70,7 +70,8 @@ brew install --cask nas-connector
   connection is restored.
 - Test the connection and credentials before saving a share.
 - Support for multiple shares from the same server/IP.
-- NetFS fallback for guest shares when `mount_smbfs` is not suitable.
+- NetFS fallback when `mount_smbfs` cannot mount a share; guest shares mount
+  anonymously via NetFS.
 - Menu bar only — no Dock icon.
 
 ## Why NasConnector?
@@ -78,7 +79,7 @@ brew install --cask nas-connector
 macOS can reconnect network shares, but after sleep, VPN changes or Wi-Fi
 switches it often fails silently. NasConnector keeps your SMB shares in one list
 and remounts them at login and whenever the network comes back, with a NetFS
-fallback for guest shares.
+fallback when needed.
 
 ## Usage
 
